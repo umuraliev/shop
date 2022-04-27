@@ -43,7 +43,3 @@ def create_product(request):
 def delete_product(request, product_slug):
     Product.objects.get(slug=product_slug).delete()
     return redirect('/')
-
-
-def update_product(request, pk):
-    post = get_object_or_404(Post, pk=pk)
