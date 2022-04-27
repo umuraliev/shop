@@ -45,5 +45,5 @@ def delete_product(request, product_slug):
     return redirect('/')
 
 
-def update_product(request):
-    pass
+def update_product(request, pk):
+    post = get_object_or_404(Post, pk=pk)
